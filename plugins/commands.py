@@ -54,15 +54,15 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('💝 sᴜʙsᴄʀɪʙᴇ ᴍʏ ʏᴏᴜᴛᴜʙᴇ ᴄʜᴀɴɴᴇʟ', url='https://youtube.com/@Tech_VJ')
+            InlineKeyboardButton('💝 sᴜʙsᴄʀɪʙᴇ ᴍʏ TELEGRAM ᴄʜᴀɴɴᴇʟ', url='https://t.me/movie_blast_official')
             ],[
-            InlineKeyboardButton('🔍 sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url='https://t.me/vj_bot_disscussion'),
-            InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ', url='https://t.me/vj_botz')
+            InlineKeyboardButton('🔍 sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url='https://t.me/movies_request_adda'),
+            InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ', url='https://t.me/movie_blast_official')
             ],[
             InlineKeyboardButton('💁‍♀️ ʜᴇʟᴘ', callback_data='help'),
             InlineKeyboardButton('😊 ᴀʙᴏᴜᴛ', callback_data='about')
         ]]
-        if CLONE_MODE == True:
+        if CLONE_MODE == False:
             buttons.append([InlineKeyboardButton('🤖 ᴄʀᴇᴀᴛᴇ ʏᴏᴜʀ ᴏᴡɴ ᴄʟᴏɴᴇ ʙᴏᴛ', callback_data='clone')])
         reply_markup = InlineKeyboardMarkup(buttons)
         me2 = (await client.get_me()).mention
@@ -109,7 +109,7 @@ async def start(client, message):
                 btn = [[
                     InlineKeyboardButton("Verify", url=await get_token(client, message.from_user.id, f"https://telegram.me/{username}?start="))
                 ],[
-                    InlineKeyboardButton("How To Open Link & Verify", url=VERIFY_TUTORIAL)
+                    InlineKeyboardButton("How To Open Link & Verify", url=https://t.me/how_to_open_upshrink_link)
                 ]]
                 await message.reply_text(
                     text="<b>You are not verified !\nKindly verify to continue !</b>",
@@ -224,7 +224,7 @@ async def start(client, message):
             btn = [[
                 InlineKeyboardButton("Verify", url=await get_token(client, message.from_user.id, f"https://telegram.me/{username}?start="))
             ],[
-                InlineKeyboardButton("How To Open Link & Verify", url=VERIFY_TUTORIAL)
+                InlineKeyboardButton("How To Open Link & Verify", url=https://t.me/how_to_open_upshrink_link)
             ]]
             await message.reply_text(
                 text="<b>You are not verified !\nKindly verify to continue !</b>",
@@ -408,10 +408,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
     
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('💝 sᴜʙsᴄʀɪʙᴇ ᴍʏ ʏᴏᴜᴛᴜʙᴇ ᴄʜᴀɴɴᴇʟ', url='https://youtube.com/@Tech_VJ')
+            InlineKeyboardButton('💝 sᴜʙsᴄʀɪʙᴇ ᴍʏ TELEGRAM ᴄʜᴀɴɴᴇʟ', url='https://t.me/movie_blast_official')
             ],[
-            InlineKeyboardButton('🔍 sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url='https://t.me/vj_bot_disscussion'),
-            InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ', url='https://t.me/vj_botz')
+            InlineKeyboardButton('🔍 sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url='https://t.me/movies_request_adda'),
+            InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ', url='https://t.me/movie_blast_official')
             ],[
             InlineKeyboardButton('🤖 ᴄʀᴇᴀᴛᴇ ʏᴏᴜʀ ᴏᴡɴ ᴄʟᴏɴᴇ ʙᴏᴛ', callback_data='clone')
             ],[
